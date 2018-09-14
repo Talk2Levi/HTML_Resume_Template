@@ -1,0 +1,492 @@
+@page{
+  size: letter portrait;
+  margin: 0;
+  max-width: 100%
+}
+
+*{
+  box-sizing: border-box;
+}
+
+:root{
+  --page-width: 8.5in;
+  --page-height: 11in;
+  --main-width: 6.4in;
+  --sidebar-width: calc(var(--page-width) - var(--main-width));
+  --decorator-horizontal-margin: 0.2in;
+
+  --sidebar-horizontal-padding: 0.2in;
+
+  --decorator-outer-offset-top: 4px;
+  --decorator-outer-offset-left: -5.5px;
+  --decorator-border-width: 1px;
+  --decorator-outer-dim: 9px;
+  --decorator-border: 1px solid #ccc;
+
+  --row-blocks-padding-top: 5pt;
+  --date-block-width: 0.6in;
+
+  --main-blocks-title-icon-offset-left: -19pt;
+  
+}
+
+body{
+  width: var(--page-width);
+  height: var(--page-height);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: 300;
+  line-height: 1.3;
+  color: #444;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4{
+  margin: 0;
+  color: #000;
+}
+
+li{
+  list-style-type: none;
+}
+
+#main{
+  float: left;
+  /* width: var(--main-width); */
+  padding: 0.1in 0in 0 0.15in;
+  font-size: 7pt;
+}
+
+#sidebar{
+  float: right;
+  position: relative; /* for disclaimer */
+  width: var(--sidebar-width);
+  height: 100%;
+  padding: 0.6in var(--sidebar-horizontal-padding);
+  background-color: rgb(15, 71, 139);
+}
+
+/* main */
+
+/** big title **/
+#title, h1, h2{
+  text-transform: uppercase;
+}
+
+#title{
+  position: relative;
+  left: -0.03in;
+  margin-bottom: 0.1in;
+  line-height: 1.2;
+}
+
+#title h1{
+  margin: auto;
+  font-weight: 600;
+  font-size: 20pt;
+  line-height: 1.6;
+}
+
+#title h6{
+  margin: auto 2pt auto 4pt;
+  font-weight: 600;
+}
+
+.unhighlighted{
+  font-weight: 100;
+}
+
+.subtitle{
+  text-transform: none;
+  font-size: 9pt;
+}
+
+.subtitle .highlighted{
+  font-weight: 900
+}
+
+/*** categorial blocks ***/
+/* Change the distance between each main blocks */
+.main-block{
+  margin-top: 0.01in;
+}
+
+#main h2{
+  position: relative;
+  top: var(--row-blocks-padding-top);
+  /* XXX: 0.5px for aligning fx printing */
+  left:var(--decorator-horizontal-margin);
+  /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
+  font-weight: 500;
+  font-size: 11pt;
+  color: rgb(56, 54, 54);
+}
+
+#main h2 > i{
+  /* use absolute position to prevent icon's width from misaligning title */
+  /* assigning a fixed width here is no better due to needing to align decorator
+     line too */
+  position: absolute;
+  left: var(--main-blocks-title-icon-offset-left);
+  z-index: 1; /* over decorator line */
+  color: #444;
+}
+
+#main h2::after{ /* extends the decorator line */
+  height: calc(var(--row-blocks-padding-top) * 2);
+  position: relative;
+  top: calc(-1 * var(--row-blocks-padding-top));
+  /* XXX: 0.5px for aligning fx printing */
+  left: calc(-1 * var(--decorator-horizontal-margin));
+  display: block;
+  border-left: var(--decorator-border);
+  z-index: 0;
+  line-height: 0;
+  font-size: 0;
+  content: ' ';
+}
+
+.blocks{
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.blocks > div{
+  padding-top: var(--row-blocks-padding-top);
+}
+
+.date{
+  flex: 0 0 var(--date-block-width);
+  padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
+  padding-right: var(--decorator-horizontal-margin);
+  font-size: 7pt;
+  text-align: right;
+  line-height: 1;
+}
+
+.date span{
+  display: block;
+}
+
+.date span:nth-child(2)::before{
+  position: relative;
+  top: 1pt;
+  right: 12pt;
+  display: block;
+  height: 10pt;
+  content: ' ';
+}
+
+.decorator{
+  flex: 0 0 0;
+  position: relative;
+  width: 2pt;
+  min-height: 100%;
+  border-left: var(--decorator-border);
+}
+
+.decorator::before{
+  position: absolute;
+  top: var(--decorator-outer-offset-top);
+  left: var(--decorator-outer-offset-left);
+  content: ' ';
+  display: block;
+  width: var(--decorator-outer-dim);
+  height: var(--decorator-outer-dim);
+  border-radius: calc(var(--decorator-outer-dim) / 2);
+  background-color: #fff;
+}
+
+.decorator::after{
+  position: absolute;
+  top: calc(var(--decorator-outer-offset-top) + var(--decorator-border-width));
+  left: calc(var(--decorator-outer-offset-left) + var(--decorator-border-width));
+  content: ' ';
+  display: block;
+  width: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
+  height: calc(var(--decorator-outer-dim) - (var(--decorator-border-width) * 2));
+  border-radius: calc((var(--decorator-outer-dim) - (var(--decorator-border-width) * 2)) / 2);
+  background-color:#000;
+}
+
+.blocks:last-child .decorator{ /* slightly shortens it */
+  margin-bottom: 0.2in;
+}
+
+
+.details{
+  flex: 1 0 0;
+  padding-left: var(--decorator-horizontal-margin);
+  padding-top: calc(var(--row-blocks-padding-top) - 7pt) !important; 
+}
+
+.details header{
+  color: #000;
+}
+
+.details h3{
+  font-size: 9pt;
+}
+
+.details h4{
+  font-weight:normal;
+  font-size: 7pt;
+  font-style: italic
+}
+
+.main-block:not(.concise) .details div{
+  margin: 0.18in 0 0.1in 0; 
+}
+
+.main-block:not(.concise) .blocks:last-child .details div{
+  margin-bottom: 0;
+}
+
+.main-block.concise .details div:not(.concise){
+  /* use padding to work around the fact that margin doesn't affect floated
+     neighboring elements */
+  padding: 0.05in 0 0.07in 0;
+}
+
+.details .job-title{
+  font-size: 9.5pt;
+  font-weight: 700;
+  float:left;
+  margin-bottom: 1pt
+}
+
+.details .university-title{
+  font-size: 9.5pt;
+  font-weight: 700;
+  float:left;
+  margin-bottom: 1pt
+}
+
+.details .major-title{
+  font-size: 7.5pt;
+  float:left;
+  margin-bottom: 1pt
+}
+
+.details .location{
+  font-size: 7pt;
+  float:right
+}
+
+.details .place{
+  float: left;
+  font-size: 7.5pt;
+}
+
+.details .date-right-aligned{
+  float: right;
+  font-size: 7.5pt;
+}
+
+.details .description{
+  float: left;
+  font-style: italic;
+  font-size: 7.5pt;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2px;  
+}
+
+.details .job-description{
+  float: left;
+  font-style: italic;
+  font-size: 7.5pt;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2px;  
+}
+
+.details .responsibility-description{
+  font-size: 7.5pt;
+  float:left;
+  margin-bottom: 1pt
+}
+
+.details .highlighted{
+  font-weight: 900
+}
+
+.details div{
+  clear: both;
+}
+
+/* .details .location::before{
+  display: inline-block;
+  position: relative;
+  right: 3pt;
+  top: 0.25pt;
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-ation: inherit;
+  content: "\f";
+} */
+
+/***** fine-tunes on the lists... *****/
+
+#main ul{
+  padding-left: 0.07in;
+  margin: 0.08in 0;
+}
+#main ol{
+  padding-left: 0.07in;
+}
+#main li{
+  margin: 0 0 0.025in 0;
+  font-size: 7.5pt;
+  white-space: pre-line;
+  display: inline-block;
+}
+
+/****** customize list symbol style ******/
+#main li::before{
+  position: relative;
+  margin-left: -5.5pt;
+  font-weight: 10000;
+  content: '• ';
+}
+.details .indent-right{
+  padding-right:30em;
+}
+
+.details .indent-left{
+  padding-left:30em;
+}
+
+.details .concise ul{
+  margin: 0 !important;
+  -webkit-columns: 5;
+  -moz-columns: 5;
+  columns: 2;
+}
+
+.details .concise li{
+  margin: 0 !important;
+}
+
+.details .concise li{
+  margin-left: 0 !important;
+}
+
+
+
+/* sidebar */
+
+#sidebar h1{
+  font-weight: 400;
+  font-size: 11pt;
+  margin-left: -14.5pt;
+  color: rgb(255, 255, 255);
+  width: var(--sidebar-width);
+  left: 10;
+}
+
+.top-side-block{
+  margin-top: 0.55in; 
+}
+
+.side-block{
+  margin-top:0.3in
+}
+
+/* CONTACT */
+#contact ul{
+  margin-top: 0.1in;
+  padding-left: 0;
+  font-weight: 400;
+  line-height: 1.75;
+  color:#fff;
+  font-size:7pt
+  
+}
+
+#contact li{
+  margin: 0.01in 0 0 0.05in;
+  font-weight: 100;
+  line-height: 1.75;
+  color:#fff;
+}
+
+#skills li::before{
+  content: '• ';
+}
+
+
+/* SKILLS */
+#skills{
+  line-height: 1.5;
+}
+
+#skills h2{
+  margin-top:0.1in;
+  margin-bottom: 0.05in;
+  margin-left:0.05in;
+  font-size: 7.5pt;
+  font-weight: 500;
+  color: #fff
+}
+
+#skills ul{
+  margin: 0 0 0 0in;
+  padding: 0;
+  color:#fff;
+  font-size:7pt
+}
+
+#skills li{
+  padding-left: 0.05in;
+  margin: 0 0 0 0.05in;
+  font-weight: 100;
+  line-height: 1.2;
+  color:#fff;
+}
+
+#skills li::before{
+  content: '• ';
+}
+
+/* CONTACT */
+#other ul{
+  margin-top: 0.1in;
+  padding-left: 0;
+  font-weight: 400;
+  line-height: 1.75;
+  color:#fff;
+  font-size:7pt
+  
+}
+
+#other li{
+  margin: 0.01in 0 0 0.05in;
+  font-weight: 100;
+  line-height: 1.75;
+  color:#fff;
+}
+
+#other li::before{
+  content: '• ';
+}
+
+/* DISCLAIMER */
+#disclaimer{
+  position: absolute;
+
+  font-size: 6.5pt;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;  
+  line-height: 1.15;
+  text-align: left;
+  color:rgb(15, 71, 139);
+  word-wrap: break-word;
+  text-transform: none;
+}
+
+#disclaimer code{
+  font-family: "Source Code Pro";
+  font-weight: 400;
+  font-style: normal;
+  color:#dcdcdc; white-space: pre-line;
+}
