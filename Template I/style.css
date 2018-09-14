@@ -309,23 +309,14 @@ li{
   font-weight: 900
 }
 
+.details .italic{
+  font-style: italic
+}
+
 .details div{
   clear: both;
 }
 
-/* .details .location::before{
-  display: inline-block;
-  position: relative;
-  right: 3pt;
-  top: 0.25pt;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-ation: inherit;
-  content: "\f";
-} */
-
-/***** fine-tunes on the lists... *****/
 
 #main ul{
   padding-left: 0.07in;
@@ -341,7 +332,6 @@ li{
   display: inline-block;
 }
 
-/****** customize list symbol style ******/
 #main li::before{
   position: relative;
   margin-left: -5.5pt;
@@ -370,8 +360,6 @@ li{
 .details .concise li{
   margin-left: 0 !important;
 }
-
-
 
 /* sidebar */
 
