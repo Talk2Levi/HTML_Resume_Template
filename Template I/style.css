@@ -57,15 +57,6 @@ li{
   font-size: 7pt;
 }
 
-#sidebar{
-  float: right;
-  position: relative; /* for disclaimer */
-  width: var(--sidebar-width);
-  height: 100%;
-  padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: rgb(15, 71, 139);
-}
-
 /* main */
 
 /** big title **/
