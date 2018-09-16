@@ -50,16 +50,9 @@ li{
   list-style-type: none;
 }
 
-#main{
-  float: left;
-  /* width: var(--main-width); */
-  padding: 0.1in 0in 0 0.15in;
-  font-size: 7pt;
-}
 
-/* main */
+/* MAIN */
 
-/** big title **/
 #title, h1, h2{
   text-transform: uppercase;
 }
@@ -96,8 +89,13 @@ li{
   font-weight: 900
 }
 
-/*** categorial blocks ***/
-/* Change the distance between each main blocks */
+#main{
+  float: left;
+  /* width: var(--main-width); */
+  padding: 0.1in 0in 0 0.15in;
+  font-size: 7pt;
+}
+
 .main-block{
   margin-top: 0.01in;
 }
@@ -114,9 +112,6 @@ li{
 }
 
 #main h2 > i{
-  /* use absolute position to prevent icon's width from misaligning title */
-  /* assigning a fixed width here is no better due to needing to align decorator
-     line too */
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
   z-index: 1; /* over decorator line */
@@ -137,6 +132,43 @@ li{
   content: ' ';
 }
 
+#main ul{
+  padding-left: 0.07in;
+  margin: 0.08in 0;
+}
+
+#main ol{
+  padding-left: 0.07in;
+}
+
+#main li{
+  margin: 0 0 0.025in 0;
+  font-size: 7.5pt;
+  white-space: pre-line;
+  display: inline-block;
+}
+
+#main li::before{
+  position: relative;
+  margin-left: -5.5pt;
+  font-weight: 10000;
+  content: '• ';
+}
+
+.main-block:not(.concise) .details div{
+  margin: 0.18in 0 0.1in 0; 
+}
+
+.main-block:not(.concise) .blocks:last-child .details div{
+  margin-bottom: 0;
+}
+
+.main-block.concise .details div:not(.concise){
+  /* use padding to work around the fact that margin doesn't affect floated
+     neighboring elements */
+  padding: 0.05in 0 0.07in 0;
+}
+
 .blocks{
   display: flex;
   flex-flow: row nowrap;
@@ -146,27 +178,8 @@ li{
   padding-top: var(--row-blocks-padding-top);
 }
 
-.date{
-  flex: 0 0 var(--date-block-width);
-  padding-top: calc(var(--row-blocks-padding-top) + 2.5pt) !important;
-  padding-right: var(--decorator-horizontal-margin);
-  font-size: 7pt;
-  text-align: right;
-  line-height: 1;
-}
 
-.date span{
-  display: block;
-}
-
-.date span:nth-child(2)::before{
-  position: relative;
-  top: 1pt;
-  right: 12pt;
-  display: block;
-  height: 10pt;
-  content: ' ';
-}
+/* DECORATOR */
 
 .decorator{
   flex: 0 0 0;
@@ -205,6 +218,8 @@ li{
 }
 
 
+/* DETAILS */
+
 .details{
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
@@ -223,20 +238,6 @@ li{
   font-weight:normal;
   font-size: 7pt;
   font-style: italic
-}
-
-.main-block:not(.concise) .details div{
-  margin: 0.18in 0 0.1in 0; 
-}
-
-.main-block:not(.concise) .blocks:last-child .details div{
-  margin-bottom: 0;
-}
-
-.main-block.concise .details div:not(.concise){
-  /* use padding to work around the fact that margin doesn't affect floated
-     neighboring elements */
-  padding: 0.05in 0 0.07in 0;
 }
 
 .details .job-title{
@@ -315,29 +316,6 @@ li{
   clear: both;
 }
 
-
-#main ul{
-  padding-left: 0.07in;
-  margin: 0.08in 0;
-}
-
-#main ol{
-  padding-left: 0.07in;
-}
-
-#main li{
-  margin: 0 0 0.025in 0;
-  font-size: 7.5pt;
-  white-space: pre-line;
-  display: inline-block;
-}
-
-#main li::before{
-  position: relative;
-  margin-left: -5.5pt;
-  font-weight: 10000;
-  content: '• ';
-}
 .details .indent-right{
   padding-right:30em;
 }
@@ -361,7 +339,8 @@ li{
   margin-left: 0 !important;
 }
 
-/* sidebar */
+
+/* SIDEBAR */
 
 #sidebar h1{
   font-weight: 400;
@@ -381,6 +360,7 @@ li{
 }
 
 /* CONTACT */
+
 #contact ul{
   margin-top: 0.1in;
   padding-left: 0;
@@ -434,47 +414,4 @@ li{
 
 #skills li::before{
   content: '• ';
-}
-
-/* CONTACT */
-#other ul{
-  margin-top: 0.1in;
-  padding-left: 0;
-  font-weight: 400;
-  line-height: 1.75;
-  color:#fff;
-  font-size:7pt
-  
-}
-
-#other li{
-  margin: 0.01in 0 0 0.05in;
-  font-weight: 100;
-  line-height: 1.75;
-  color:#fff;
-}
-
-#other li::before{
-  content: '• ';
-}
-
-/* DISCLAIMER */
-#disclaimer{
-  position: absolute;
-
-  font-size: 6.5pt;
-  font-style: italic;
-  font-family: "Times New Roman", Times, serif;  
-  line-height: 1.15;
-  text-align: left;
-  color:rgb(15, 71, 139);
-  word-wrap: break-word;
-  text-transform: none;
-}
-
-#disclaimer code{
-  font-family: "Source Code Pro";
-  font-weight: 400;
-  font-style: normal;
-  color:#dcdcdc; white-space: pre-line;
 }

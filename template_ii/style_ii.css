@@ -59,16 +59,15 @@ li{
 
 #sidebar{
   float: right;
-  position: relative; /* for disclaimer */
+  position: relative;
   width: var(--sidebar-width);
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
   background-color: rgb(15, 71, 139);
 }
 
-/* main */
+/* MAIN */
 
-/** big title **/
 #title, h1, h2{
   text-transform: uppercase;
 }
@@ -99,8 +98,6 @@ li{
   font-size: 8pt;
 }
 
-/*** categorial blocks ***/
-/* Change the distance between each main blocks */
 .main-block{
   margin-top: 0.05in;
 }
@@ -108,29 +105,23 @@ li{
 #main h2{
   position: relative;
   top: var(--row-blocks-padding-top);
-  /* XXX: 0.5px for aligning fx printing */
   left:var(--decorator-horizontal-margin);
-  /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
   font-weight: 500;
   font-size: 11pt;
   color: rgb(56, 54, 54);
 }
 
 #main h2 > i{
-  /* use absolute position to prevent icon's width from misaligning title */
-  /* assigning a fixed width here is no better due to needing to align decorator
-     line too */
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
   z-index: 1; /* over decorator line */
   color: #444;
 }
 
-#main h2::after{ /* extends the decorator line */
+#main h2::after{ 
   height: calc(var(--row-blocks-padding-top) * 2);
   position: relative;
   top: calc(-1 * var(--row-blocks-padding-top));
-  /* XXX: 0.5px for aligning fx printing */
   left: calc(-1 * var(--decorator-horizontal-margin));
   display: block;
   border-left: var(--decorator-border);
@@ -138,6 +129,29 @@ li{
   line-height: 0;
   font-size: 0;
   content: ' ';
+}
+
+#main ul{
+  padding-left: 0.07in;
+  margin: 0.08in 0;
+}
+
+#main ol{
+  padding-left: 0.07in;
+}
+
+#main li{
+  margin: 0 0 0.025in 0;
+  font-size: 7.5pt;
+  white-space: pre-line;
+  display: inline-block;
+}
+
+#main li::before{
+  position: relative;
+  margin-left: -5.5pt;
+  font-weight: 10000;
+  content: '• ';
 }
 
 .blocks{
@@ -170,6 +184,8 @@ li{
   height: 10pt;
   content: ' ';
 }
+
+/* LEFT SIDE DECORATOR */
 
 .decorator{
   flex: 0 0 0;
@@ -207,15 +223,12 @@ li{
   margin-bottom: 0.25in;
 }
 
+/* DETAILS */
 
 .details{
   flex: 1 0 0;
   padding-left: var(--decorator-horizontal-margin);
   padding-top: calc(var(--row-blocks-padding-top) - 3pt) !important; 
-}
-
-.details header{
-  color: #000;
 }
 
 .details h3{
@@ -226,20 +239,6 @@ li{
   font-weight:normal;
   font-size: 7pt;
   font-style: italic
-}
-
-.main-block:not(.concise) .details div{
-  margin: 0.18in 0 0.1in 0; 
-}
-
-.main-block:not(.concise) .blocks:last-child .details div{
-  margin-bottom: 0;
-}
-
-.main-block.concise .details div:not(.concise){
-  /* use padding to work around the fact that margin doesn't affect floated
-     neighboring elements */
-  padding: 0.05in 0 0.07in 0;
 }
 
 .details .school-title{
@@ -300,42 +299,6 @@ li{
   float:left;
   margin-bottom: 1pt
 }
-/* .details .location::before{
-  display: inline-block;
-  position: relative;
-  right: 3pt;
-  top: 0.25pt;
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  text-ation: inherit;
-  content: "\f";
-} */
-
-/***** fine-tunes on the lists... *****/
-
-#main ul{
-  padding-left: 0.07in;
-  margin: 0.08in 0;
-}
-
-#main ol{
-  padding-left: 0.07in;
-}
-
-#main li{
-  margin: 0 0 0.025in 0;
-  font-size: 7.5pt;
-  white-space: pre-line;
-  display: inline-block;
-}
-
-#main li::before{
-  position: relative;
-  margin-left: -5.5pt;
-  font-weight: 10000;
-  content: '• ';
-}
 
 .details .concise ul{
   margin: 0 !important;
@@ -356,13 +319,14 @@ li{
   font-style: italic
 }
 
-/* sidebar */
+/* SIDEBAR */
 
 #sidebar h1{
   font-weight: 400;
   font-size: 11pt;
   margin-left: -14.5pt;
   color: rgb(255, 255, 255);
+  background-color:rgb(22, 61, 112);
   width: var(--sidebar-width);
   left: 10;
 }
@@ -393,12 +357,12 @@ li{
   color:#fff;
 }
 
+
+/* SKILLS */
 #skills li::before{
   content: '• ';
 }
 
-
-/* SKILLS */
 #skills{
   line-height: 1.5;
 }
