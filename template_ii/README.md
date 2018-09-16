@@ -1,6 +1,8 @@
 ## Idea of Designs
 Because of the sidebar, we have a lot more fun to play around with the design of your resume, but it took a lot of places, so you can't actually write a lot in the main part, good thing, on the other hand, is that you can add more colors on your resume!
 
+More details and things that you need to notice are in my [Blog], go take a look huh :)(https://levispace.wordpress.com/2018/09/14/html-resume-template-ii/).
+
 ## I Have Few Themes Options For Ya !
 ### Drak
 - name/ side bar background:  rgb(56, 61, 71)
