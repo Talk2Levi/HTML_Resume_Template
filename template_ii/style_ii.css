@@ -63,10 +63,10 @@ li{
   width: var(--sidebar-width);
   height: 100%;
   padding: 0.6in var(--sidebar-horizontal-padding);
-  background-color: rgb(15, 71, 139);
+  background-color: rgb(56, 61, 71)
 }
 
-/* MAIN */
+/* main */
 
 #title, h1, h2{
   text-transform: uppercase;
@@ -83,6 +83,7 @@ li{
   font-weight: 600;
   font-size: 26pt;
   line-height: 1.5;
+  color:rgb(56, 61, 71)
 }
 
 #title h6{
@@ -96,6 +97,7 @@ li{
 
 .subtitle{
   font-size: 8pt;
+  color:rgb(38, 41, 49)
 }
 
 .main-block{
@@ -108,14 +110,12 @@ li{
   left:var(--decorator-horizontal-margin);
   font-weight: 500;
   font-size: 11pt;
-  color: rgb(56, 54, 54);
 }
 
 #main h2 > i{
   position: absolute;
   left: var(--main-blocks-title-icon-offset-left);
-  z-index: 1; /* over decorator line */
-  color: #444;
+  z-index: 1;
 }
 
 #main h2::after{ 
@@ -293,7 +293,7 @@ li{
   padding-left:20em;
 }
 
-.details .university-title{
+.details .major-title{
   font-size: 9.5pt;
   font-weight: 700;
   float:left;
@@ -326,7 +326,7 @@ li{
   font-size: 11pt;
   margin-left: -14.5pt;
   color: rgb(255, 255, 255);
-  background-color:rgb(22, 61, 112);
+  background-color:rgb(38, 41, 49);
   width: var(--sidebar-width);
   left: 10;
 }
@@ -340,12 +340,15 @@ li{
 }
 
 /* CONTACT */
+#contact{
+  color:rgb(255, 255, 255);
+}
+
 #contact ul{
   margin-top: 0.1in;
   padding-left: 0;
   font-weight: 400;
   line-height: 1.75;
-  color:#fff;
   font-size:7pt
   
 }
@@ -354,7 +357,6 @@ li{
   margin: 0.01in 0 0 0.05in;
   font-weight: 100;
   line-height: 1.75;
-  color:#fff;
 }
 
 
@@ -365,6 +367,7 @@ li{
 
 #skills{
   line-height: 1.5;
+  color: rgb(255, 255, 255);
 }
 
 #skills h2{
@@ -373,13 +376,12 @@ li{
   margin-left:0.05in;
   font-size: 7.5pt;
   font-weight: 500;
-  color: #fff
+  color: rgb(255, 255, 255);
 }
 
 #skills ul{
   margin: 0 0 0 0in;
   padding: 0;
-  color:#fff;
   font-size:7pt
 }
 
@@ -388,20 +390,23 @@ li{
   margin: 0 0 0 0.05in;
   font-weight: 100;
   line-height: 1.2;
-  color:#fff;
 }
 
 #skills li::before{
   content: '• ';
 }
 
-/* CONTACT */
+/* OTHER */
+
+#other{
+  color:rgb(255, 255, 255);
+}
+
 #other ul{
   margin-top: 0.1in;
   padding-left: 0;
   font-weight: 400;
   line-height: 1.75;
-  color:#fff;
   font-size:7pt
   
 }
@@ -410,7 +415,6 @@ li{
   margin: 0.01in 0 0 0.05in;
   font-weight: 100;
   line-height: 1.75;
-  color:#fff;
 }
 
 #other li::before{
@@ -428,13 +432,6 @@ li{
   font-family: "Times New Roman", Times, serif;  
   line-height: 1.15;
   text-align: left;
-  color:#fff;
+  color:rgb(255, 255, 255);
   word-wrap: break-word
-}
-
-#disclaimer code{
-  font-family: "Source Code Pro";
-  font-weight: 400;
-  font-style: normal;
-  color:#dcdcdc; white-space: pre-line;
 }

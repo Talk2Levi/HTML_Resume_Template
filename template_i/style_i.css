@@ -159,8 +159,6 @@ li{
 }
 
 .main-block.concise .details div:not(.concise){
-  /* use padding to work around the fact that margin doesn't affect floated
-     neighboring elements */
   padding: 0.05in 0 0.07in 0;
 }
 
