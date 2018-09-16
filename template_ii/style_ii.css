@@ -260,7 +260,7 @@ li{
   float:right
 }
 
-.details .place{
+.details .company{
   float: left;
   font-size: 7.5pt;
 }
@@ -286,6 +286,20 @@ li{
   clear: both;
 }
 
+.details .indent-right{
+  padding-right:20em;
+}
+
+.details .indent-left{
+  padding-left:20em;
+}
+
+.details .university-title{
+  font-size: 9.5pt;
+  font-weight: 700;
+  float:left;
+  margin-bottom: 1pt
+}
 /* .details .location::before{
   display: inline-block;
   position: relative;
@@ -305,6 +319,10 @@ li{
   margin: 0.08in 0;
 }
 
+#main ol{
+  padding-left: 0.07in;
+}
+
 #main li{
   margin: 0 0 0.025in 0;
   font-size: 7.5pt;
@@ -312,7 +330,6 @@ li{
   display: inline-block;
 }
 
-/****** customize list symbol style ******/
 #main li::before{
   position: relative;
   margin-left: -5.5pt;
@@ -335,7 +352,9 @@ li{
   margin-left: 0 !important;
 }
 
-
+.details .italic{
+  font-style: italic
+}
 
 /* sidebar */
 

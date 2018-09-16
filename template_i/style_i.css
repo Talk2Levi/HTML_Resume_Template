@@ -246,6 +246,13 @@ li{
   margin-bottom: 1pt
 }
 
+.details .project-title{
+  font-size: 9.5pt;
+  font-weight: 700;
+  float:left;
+  margin-bottom: 1pt
+}
+
 .details .university-title{
   font-size: 9.5pt;
   font-weight: 700;
@@ -313,9 +320,11 @@ li{
   padding-left: 0.07in;
   margin: 0.08in 0;
 }
+
 #main ol{
   padding-left: 0.07in;
 }
+
 #main li{
   margin: 0 0 0.025in 0;
   font-size: 7.5pt;
