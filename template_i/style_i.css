@@ -102,11 +102,7 @@ li{
 
 #main h2{
   position: relative;
-  top: var(--row-blocks-padding-top);
-  /* XXX: 0.5px for aligning fx printing */
-  left:var(--decorator-horizontal-margin);
-  /* left: calc((var(--date-block-width) + var(--decorator-horizontal-margin))); */
-  font-weight: 500;
+  top: var(--row-blocks-padding-top); left:var(--decorator-horizontal-margin);font-weight: 500;
   font-size: 11pt;
   color: rgb(56, 54, 54);
 }
@@ -118,11 +114,10 @@ li{
   color: #444;
 }
 
-#main h2::after{ /* extends the decorator line */
+#main h2::after{
   height: calc(var(--row-blocks-padding-top) * 2);
   position: relative;
   top: calc(-1 * var(--row-blocks-padding-top));
-  /* XXX: 0.5px for aligning fx printing */
   left: calc(-1 * var(--decorator-horizontal-margin));
   display: block;
   border-left: var(--decorator-border);
