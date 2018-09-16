@@ -6,7 +6,7 @@ Check out my [Blog](https://levispace.wordpress.com/) for more designing details
 Click [Here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_i) To Get More Details About Template I
 <img width="794" alt="screenshot 2018-09-16 03 12 19" src="https://user-images.githubusercontent.com/37234961/45594325-5cd00080-b95e-11e8-98b3-58c0ad7b80d5.png">
 
-## Template II
+## Template II (With Five Themes)
 Click [here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_ii) To Get More Details About Template II
 ### Drak
 <img width="788" alt="screenshot 2018-09-16 03 01 20" src="https://user-images.githubusercontent.com/37234961/45594245-cf3fe100-b95c-11e8-9843-4d44cb932fa7.png">
