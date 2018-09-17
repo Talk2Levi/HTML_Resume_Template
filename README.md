@@ -21,6 +21,7 @@ Click [Here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/t
 ## Template II (With Five Themes)
 Click [here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_ii) To See The Code Of Template II
 and color details.
+
 These are just five themes that I designed, and please let me know if you have more color designing ideas!
 
 ### Drak
