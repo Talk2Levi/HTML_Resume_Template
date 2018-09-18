@@ -12,7 +12,7 @@ Without further ado, let's get it started!!
 
 # HTML_Resume_Templates
 Well Defined Resume Template With HTML &amp; CSS
-Check out my [Blog](https://levispace.wordpress.com/) for more designing details behind it :)
+Check out my [Blog](https://levispace.wordpress.com/) for more designing details behind it.
 
 ## Template I
 Click [Here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_i) To See The Code Of Template I
