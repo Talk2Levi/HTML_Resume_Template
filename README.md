@@ -14,10 +14,6 @@ Without further ado, let's get it started!!
 Well Defined Resume Template With HTML &amp; CSS
 Check out my [Blog](https://levispace.wordpress.com/) for more designing details behind it.
 
-## Template I
-Click [Here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_i) To See The Code Of Template I
-<img width="794" alt="screenshot 2018-09-16 03 12 19" src="https://user-images.githubusercontent.com/37234961/45594325-5cd00080-b95e-11e8-98b3-58c0ad7b80d5.png">
-
 ## Template II (With Five Themes)
 Click [here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_ii) To See The Code Of Template II
 and color details.
@@ -38,3 +34,8 @@ These are just five themes that I designed, and please let me know if you have m
 
 ### Green
 <img width="791" alt="screenshot 2018-09-16 03 02 00" src="https://user-images.githubusercontent.com/37234961/45594252-fbf3f880-b95c-11e8-8dd0-7069a3c73294.png">
+
+## Template I
+Click [Here](https://github.com/LeviIsAwesome/HTML_Resume_Template/tree/master/template_i) To See The Code Of Template I
+<img width="794" alt="screenshot 2018-09-16 03 12 19" src="https://user-images.githubusercontent.com/37234961/45594325-5cd00080-b95e-11e8-98b3-58c0ad7b80d5.png">
+
