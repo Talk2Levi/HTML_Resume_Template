@@ -1,7 +1,7 @@
 # Welcome!
 Hey, What's up folks, welcome to this resume template tour!! 
 
-Let me be really frank with you, I am not an expert on designing, it's just I know how frustrating it can be when you just started writing a resume and now, I got a little bit hang of it and I just wanna help you to get over the frustrating time you are having now.
+Let me be really frank with you, I am not an expert on designing, it's just I know how frustrating it can be when you just started writing a resume. And now I got a little bit hang of it and I just wanna help you to get over the frustrating time you are having now.
 
 If you have any better advice to improve this repo, such as other color combination of Template II, or more designing ideas, you are more than welcome to Star or Fork the repo and let me know!
 
