@@ -1,4 +1,4 @@
-# Welcome!
+# Welcome! [![HitCount](http://hits.dwyl.io/LeviIsAwesome/https://github.com/LeviIsAwesome/HTML_Resume_Template.svg)](http://hits.dwyl.io/LeviIsAwesome/https://github.com/LeviIsAwesome/HTML_Resume_Template)
 Hey, What's up folks, welcome to this resume template tour!! 
 
 Let me be really frank with you, I am not an expert on designing, it's just I know how frustrating it can be when you just started writing a resume. And now I got a little bit hang of it and I just wanna help you to get over the frustrating time you are having now.
