@@ -8,7 +8,7 @@ If you have any better advice to improve this repo, such as other color combinat
 
 Check out my finished sample resume at [here](https://levispace.wordpress.com/2018/09/16/my-resume/) and my inspiration was from [mnjul's repo](https://github.com/mnjul/html-resume), some awesome job he did there, you should also go take a look!!
 
-Without further ado, let's get it started!!
+Without further ado, let's get it started!! (FYI: this is [my current resume](https://github.com/LeviIsAwesome/resume))
 
 # HTML_Resume_Templates
 Well Defined Resume Template With HTML &amp; CSS
